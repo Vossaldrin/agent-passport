@@ -1,36 +1,22 @@
 # Agent Passport
 
-Secure digital identity + autonomous payments for AI agents.
+**Secure identity + autonomous payments for AI agents.**
 
-**"Give your agents a passport and a wallet so they can work independently."**
+Gives your AI agents a cryptographic passport and smart wallet so they can operate independently with rules, limits, and real x402 payments.
 
 ## Features
-- Cryptographic Agent Identity
-- Programmable spending rules
+- Verifiable Agent Identity
+- Programmable spending rules & daily limits
 - Real x402 autonomous payments
-- CLI tool (easy to use)
+- Multi-chain support (Base, Ethereum, Arbitrum, etc.)
+- ERC-8004 on-chain identity ready
 
 ## Quick Start
 
 ```bash
-python -m agent_passport create "MyAgent"
-python -m agent_passport pay https://api.example.com/data 2.5 --description "Fetch data"
-EOF
-cat > README.md << 'EOL'
-# Agent Passport
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 
-Secure digital identity + autonomous payments for AI agents.
-
-**"Give your agents a passport and a wallet so they can work independently."**
-
-## Features
-- Cryptographic Agent Identity
-- Programmable spending rules
-- Real x402 autonomous payments
-- CLI tool (easy to use)
-
-## Quick Start
-
-```bash
-python -m agent_passport create "MyAgent"
+python -m agent_passport create "MyAgent" --chain base-sepolia
 python -m agent_passport pay https://api.example.com/data 2.5 --description "Fetch data"

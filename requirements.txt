@@ -1,0 +1,3 @@
+eth-account
+web3
+x402[requests,evm]
